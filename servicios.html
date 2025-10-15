@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios - Ministerio Internacional Espíritu de Vida Panamá</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
+    <style>
+        :root { --primary-color:#0B1D3A; --secondary-color:#D4AF37; --accent-color:#F1E6C8; --text-color:#333333; --light-bg:#FAFAFA; --dark-gold:#B8941F; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Montserrat',sans-serif;color:var(--text-color);overflow-x:hidden;background-color:#ffffff}
+        h1,h2,h3,h4,h5,h6{font-family:'Playfair Display',serif;font-weight:700}
+        .header{background-color:var(--primary-color);padding:15px 0;position:fixed;width:100%;top:0;z-index:1000;box-shadow:0 4px 15px rgba(0,0,0,0.2);transition:all .3s ease}
+        .logo{height:60px;margin-right:15px;transition:transform .3s ease}
+        .logo:hover{transform:scale(1.05)}
+        .logo-text{color:var(--secondary-color);font-size:1.2rem;font-weight:600;font-family:'Playfair Display',serif;text-shadow:1px 1px 3px rgba(0,0,0,.5);display:none!important}
+        .navbar{background-color:transparent!important;padding:0}
+        .navbar-nav .nav-link{color:#fff!important;margin:0 10px;font-weight:500;transition:all .3s ease;position:relative;padding-bottom:5px}
+        .navbar-nav .nav-link:hover{color:var(--secondary-color)!important}
+        .navbar-nav .nav-link::after{content:'';position:absolute;width:0;height:2px;bottom:0;left:50%;background-color:var(--secondary-color);transition:all .3s ease}
+        .navbar-nav .nav-link:hover::after{width:80%;left:10%}
+        .services-section{padding:130px 0 80px;background-color:#fff}
+        .section-title{text-align:center;margin-bottom:50px;position:relative;color:var(--primary-color)}
+        .section-title::after{content:'';position:absolute;width:80px;height:3px;background-color:var(--secondary-color);bottom:-15px;left:50%;transform:translateX(-50%)}
+        .services-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+        .service-card{background-color:var(--light-bg);border-radius:15px;padding:30px;text-align:center;box-shadow:0 10px 25px rgba(0,0,0,.08);transition:all .3s ease;border-left:5px solid var(--secondary-color)}
+        .service-card:hover{transform:translateY(-10px);box-shadow:0 15px 35px rgba(0,0,0,.15)}
+        .service-icon{font-size:3rem;color:var(--secondary-color);margin-bottom:20px}
+        .service-title{font-size:1.5rem;color:var(--primary-color);margin-bottom:10px;font-family:'Playfair Display',serif}
+        .service-time{font-weight:600;color:var(--dark-gold);margin-bottom:15px}
+        .service-description{color:var(--text-color);font-size:.95rem}
+        .footer{background-color:var(--primary-color);color:#fff;padding:60px 0 20px;margin-top:40px}
+        .footer-title{color:var(--secondary-color);margin-bottom:25px;font-size:1.5rem}
+        .social-icons{display:flex;gap:15px;margin-bottom:30px}
+        .social-icon{width:45px;height:45px;background-color:rgba(255,255,255,.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;transition:all .3s ease;text-decoration:none}
+        .social-icon:hover{background-color:var(--secondary-color);color:var(--primary-color);transform:translateY(-5px);box-shadow:0 5px 15px rgba(212,175,55,.4)}
+        .footer-links{list-style:none;padding:0}
+        .footer-links li{margin-bottom:10px}
+        .footer-links a{color:rgba(255,255,255,.7);text-decoration:none;transition:all .3s ease}
+        .footer-links a:hover{color:var(--secondary-color);padding-left:5px}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,.1);margin-top:40px;padding-top:20px;text-align:center;color:rgba(255,255,255,.5)}
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <a class="navbar-brand d-flex align-items-center" href="inicio.html">
+                        <img src="./assets/logos/logo.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
+                        <span class="logo-text">Ministerio Internacional Espíritu de Vida Panamá</span>
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="donaciones.html">Donaciones</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="services-section" id="servicios">
+        <div class="container">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-church"></i></div>
+                    <h3 class="service-title">Culto Dominical</h3>
+                    <p class="service-time">Domingos a las 10:00 am</p>
+                    <p class="service-description">Únete a nosotros para un tiempo de adoración, alabanza y una palabra profética que fortalecerá tu fe y renovará tu esperanza.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3 class="service-title">Célular</h3>
+                    <p class="service-time">Martes a las 7:00 pm</p>
+                    <p class="service-description">Reuniones en los hogares para compartir, orar y crecer juntos en la fe en un ambiente familiar y de comunión.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-book-open"></i></div>
+                    <h3 class="service-title">Estudio Bíblico</h3>
+                    <p class="service-time">Miércoles a las 7:00 pm</p>
+                    <p class="service-description">Profundiza en las Escrituras y descubre los tesoros de la sabiduría divina para aplicarlos a tu vida diaria.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hands-praying"></i></div>
+                    <h3 class="service-title">Reunión de Oración</h3>
+                    <p class="service-time">Viernes a las 7:00 pm</p>
+                    <p class="service-description">Un poderoso tiempo de intercesión donde clamamos por las necesidades de nuestra comunidad, nación y el mundo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="footer-title">Sobre Nosotros</h3>
+                    <p>Ministerio Internacional Espíritu de Vida Panamá es una comunidad cristiana comprometida con hacer discípulos y enseñar las enseñanzas de Cristo, cumpliendo la misión que Él nos dejó en Mateo 28:19-20.</p>
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/ministerioespiritudevidapty" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Espiritu%20de%20Vida%20Panam%C3%A1" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://www.youtube.com/EspirituVidaPTY" target="_blank" class="social-icon"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="nosotros.html">Acerca de Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="eventos.html">Eventos</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                        <li><a href="donaciones.html">Donaciones</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footer-title">Contacto</h3>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Calle Principal #123, Ciudad de Panamá</p>
+                    <p><i class="fas fa-phone me-2"></i> +507 1232-4567</p>
+                    <p><i class="fas fa-envelope me-2"></i> info@espiritudevidapanama.org</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2023 Ministerio Internacional Espíritu de Vida Panamá. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
