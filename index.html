@@ -13,12 +13,35 @@
     <!-- Header -->
     <header class="header">
         <div class="container">
+            <!-- Language Selector Button - Top Right -->
+            <div class="language-button-container">
+                <button class="language-toggle-btn" id="languageToggleBtn">
+                    <i class="fas fa-globe"></i>
+                    <span class="current-lang">ES</span>
+                </button>
+                <div class="language-dropdown-menu" id="languageDropdown">
+                    <a href="#" class="language-option" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span>Español</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="en">
+                        <span class="flag">🇺🇸</span>
+                        <span>English</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="zh">
+                        <span class="flag">🇨🇳</span>
+                        <span>中文</span>
+                    </a>
+                </div>
+            </div>
+            
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand d-flex align-items-center" href="#">
                         <img class="logo" src="./assets/logos/logo.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
                         <span class="logo-text">Ministerio Internacional Espíritu de Vida Panamá</span>
                     </a>
+                    
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
@@ -41,13 +64,6 @@
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="donaciones.html" data-translate="nav_donations">Donaciones</a>
-                            </li>
-                            <li class="nav-item language-selector">
-                                <select class="language-dropdown" id="languageSelector">
-                                    <option value="es">ES</option>
-                                    <option value="en">EN</option>
-                                    <option value="zh">中文</option>
-                                </select>
                             </li>
                         </ul>
                     </div>
@@ -271,7 +287,7 @@
                         </div>
                         <div>
                             <h4 data-translate="contact_hours_title">Horarios de Servicio</h4>
-                            <p data-translate="contact_hours">Domingos: 9:00 AM.<br>Miércoles: 7:00 PM.<div>Viernes: 7:00 PM.</div></p>
+                            <p data-translate="contact_hours">Domingos: 9:00 AM.<br>Miércoles: 7:00 PM.<br>Viernes: 7:00 PM.</p>
                         </div>
                     </div>
                 </div>
@@ -526,4 +542,69 @@
                 cta_learn_more: "了解更多",
                 about_title: "关于我们",
                 about_subtitle: "我们的使命",
-                about_mission: "在巴拿马国际生命之灵事工，我们的使命是与每个人分享基督的爱，创建一个充满活力的社区，</script></body></html>
+                about_mission: "在巴拿马国际生命之灵事工，我们的使命是与每个人分享基督的爱，创建一个充满活力的社区，让每个人都能体验圣灵的变革力量。我们寻求成为我们城市及更远地区的希望灯塔。",
+                about_vision_title: "我们的愿景",
+                about_vision: "我们的愿景是看到生命被福音改变，家庭得到恢复，社区被上帝的爱所影响。我们努力成为一个相关的教会，将信仰与日常生活联系起来。",
+                about_beliefs_title: "我们的信仰",
+                about_beliefs: "我们相信圣经是上帝启示的话语，通过耶稣基督得救，以及圣灵引导和装备信徒的力量。我们重视敬拜、社区和服务作为我们信仰的表达。",
+                services_title: "我们的服务",
+                service1_title: "主日崇拜",
+                service1_time: "周日上午10:00",
+                service1_desc: "加入我们进行敬拜、赞美和预言话语的时间，这将加强你的信心并更新你的希望。",
+                service2_title: "小组聚会",
+                service2_time: "周二晚上7:00",
+                service2_desc: "在家庭聚会中分享、祈祷和一起在信仰中成长，在家庭和团契的环境中。",
+                service3_title: "圣经学习",
+                service3_time: "周三晚上7:00",
+                service3_desc: "深入圣经，发现神圣智慧的宝藏，将其应用到你的日常生活中。",
+                service4_title: "祷告会",
+                service4_time: "周五晚上7:00",
+                service4_desc: "一个强有力的代祷时间，我们为社区、国家和世界的需要呼求。",
+                events_title: "本月活动",
+                event1_title: "圣餐",
+                event1_date: "10月12日星期日",
+                event1_time: "上午10:00",
+                event1_desc: "我们在圣餐桌上纪念耶稣的牺牲，反思和更新我们与上帝的盟约。",
+                event2_title: "守夜",
+                event2_date: "10月17日星期五",
+                event2_time: "晚上7:00",
+                event2_desc: "一个通过祷告、赞美和话语不断寻求上帝同在的夜晚。",
+                event3_title: "青年崇拜",
+                event3_date: "10月18日星期六",
+                event3_time: "下午4:00",
+                event3_desc: "一个为年轻人设计的动态空间，有当代音乐、相关信息和加强他们信仰的活动。",
+                event4_title: "属灵诊所",
+                event4_date: "11月8-9日星期六至星期日",
+                event4_time: "上午6:00",
+                event4_desc: "一个属灵沉浸的周末，有深刻的教导、祷告和医治释放的服事。",
+                quote_text: "\"这殿后来的荣耀必大过先前的荣耀\"，万军之耶和华说。\"在这地方我必赐平安\"，万军之耶和华说。",
+                quote_author: "哈该书2:9",
+                contact_title: "联系我们",
+                contact_info_title: "联系信息",
+                contact_address_title: "地址",
+                contact_address: "主街#123，巴拿马城，巴拿马",
+                contact_phone_title: "电话",
+                contact_email_title: "电子邮件",
+                contact_hours_title: "服务时间",
+                contact_hours: "周日：上午9:00和11:00<br>周三：晚上7:00",
+                contact_form_title: "发送消息",
+                contact_name: "姓名",
+                contact_email: "电子邮件",
+                contact_subject: "主题",
+                contact_message: "您的消息",
+                contact_submit: "发送消息",
+                footer_about: "关于我们",
+                footer_about_text: "巴拿马国际生命之灵事工是一个致力于分享基督的爱并通过福音改变生命的基督教社区。",
+                footer_links: "快速链接",
+                footer_about_link: "关于我们",
+                footer_services_link: "服务",
+                footer_events_link: "活动",
+                footer_donations_link: "捐款",
+                footer_contact_link: "联系我们",
+                footer_contact: "联系我们",
+                footer_rights: "版权所有。"
+            }
+        };
+    </script>
+</body>
+</html>
