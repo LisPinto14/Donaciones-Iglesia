@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto - Ministerio Internacional Espíritu de Vida Panamá</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
@@ -48,10 +49,32 @@
 <body>
     <header class="header">
         <div class="container">
+            <!-- Language Selector Button - Top Right -->
+            <div class="language-button-container">
+                <button class="language-toggle-btn" id="languageToggleBtn">
+                    <i class="fas fa-globe"></i>
+                    <span class="current-lang">ES</span>
+                </button>
+                <div class="language-dropdown-menu" id="languageDropdown">
+                    <a href="#" class="language-option" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span>Español</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="en">
+                        <span class="flag">🇺🇸</span>
+                        <span>English</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="zh">
+                        <span class="flag">🇨🇳</span>
+                        <span>中文</span>
+                    </a>
+                </div>
+            </div>
+            
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand d-flex align-items-center" href="inicio.html">
-                        <img src="./assets/logos/logo.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
+                        <img src="./assets/logos/E.PTY.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
                         <span class="logo-text">Ministerio Internacional Espíritu de Vida Panamá</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -59,12 +82,24 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                            <li class="nav-item"><a class="nav-link" href="donaciones.html">Donaciones</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="inicio.html" data-translate="nav_home">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotros.html" data-translate="nav_about">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html" data-translate="nav_services">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="eventos.html" data-translate="nav_events">Eventos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html" data-translate="nav_contact">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donaciones.html" data-translate="nav_donations">Donaciones</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -74,53 +109,53 @@
 
     <section class="contact-section" id="contacto">
         <div class="container">
-            <h2 class="section-title">Contacto</h2>
+            <h2 class="section-title" data-translate="contact_title">Contacto</h2>
             <div class="contact-container">
                 <div class="contact-info flex-1">
-                    <h3>Información de Contacto</h3>
+                    <h3 data-translate="contact_info_title">Información de Contacto</h3>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div>
-                            <h4>Dirección</h4>
-                            <p>XFHC+J7Q, Panamá, Provincia de Panamá</p>
+                            <h4 data-translate="contact_address_title">Dirección</h4>
+                            <p data-translate="contact_address">XFHC+J7Q, Panamá, Provincia de Panamá</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div>
-                            <h4>Teléfono</h4>
+                            <h4 data-translate="contact_phone_title">Teléfono</h4>
                             <p>+507 123-4567</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
-                            <h4>Correo Electrónico</h4>
+                            <h4 data-translate="contact_email_title">Correo Electrónico</h4>
                             <p>info@espiritudevidapanama.org</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div>
-                            <h4>Horarios de Servicio</h4>
-                            <p>Domingos: 9:00 AM.<br>Miércoles: 7:00 PM.<br>Viernes: 7:00 PM.</p>
+                            <h4 data-translate="contact_hours_title">Horarios de Servicio</h4>
+                            <p data-translate="contact_hours">Domingos: 9:00 AM.<br>Miércoles: 7:00 PM.<br>Viernes: 7:00 PM.</p>
                         </div>
                     </div>
                 </div>
                 <div class="contact-form flex-1">
-                    <h3>Envíanos un Mensaje</h3>
+                    <h3 data-translate="contact_form_title">Envíanos un Mensaje</h3>
                     <form id="contactForm">
                         <div class="row">
                             <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Nombre" required>
+                                <input type="text" class="form-control" placeholder="Nombre" data-translate-placeholder="contact_name" required>
                             </div>
                             <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Correo Electrónico" required>
+                                <input type="email" class="form-control" placeholder="Correo Electrónico" data-translate-placeholder="contact_email" required>
                             </div>
                         </div>
-                        <input type="text" class="form-control" placeholder="Asunto" required>
-                        <textarea class="form-control" rows="5" placeholder="Tu Mensaje" required></textarea>
-                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                        <input type="text" class="form-control" placeholder="Asunto" data-translate-placeholder="contact_subject" required>
+                        <textarea class="form-control" rows="5" placeholder="Tu Mensaje" data-translate-placeholder="contact_message" required></textarea>
+                        <button type="submit" class="submit-btn" data-translate="contact_submit">Enviar Mensaje</button>
                     </form>
                 </div>
             </div>
@@ -131,8 +166,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3 class="footer-title">Sobre Nosotros</h3>
-                    <p>Ministerio Internacional Espíritu de Vida Panamá es una comunidad cristiana comprometida con hacer discípulos y enseñar las enseñanzas de Cristo, cumpliendo la misión que Él nos dejó en Mateo 28:19-20.</p>
+                    <h3 class="footer-title" data-translate="footer_about">Sobre Nosotros</h3>
+                    <p data-translate="footer_about_text">Ministerio Internacional Espíritu de Vida Panamá es una comunidad cristiana comprometida con hacer discípulos y enseñar las enseñanzas de Cristo, cumpliendo la misión que Él nos dejó en Mateo 28:19-20.</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/ministerioespiritudevidapty" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/Espiritu%20de%20Vida%20Panam%C3%A1" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -141,29 +176,30 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <h3 class="footer-title" data-translate="footer_links">Enlaces Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="nosotros.html">Acerca de Nosotros</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="donaciones.html">Donaciones</a></li>
+                        <li><a href="nosotros.html" data-translate="footer_about_link">Acerca de Nosotros</a></li>
+                        <li><a href="servicios.html" data-translate="footer_services_link">Servicios</a></li>
+                        <li><a href="eventos.html" data-translate="footer_events_link">Eventos</a></li>
+                        <li><a href="contacto.html" data-translate="footer_contact_link">Contacto</a></li>
+                        <li><a href="donaciones.html" data-translate="footer_donations_link">Donaciones</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="footer-title">Contacto</h3>
+                    <h3 class="footer-title" data-translate="footer_contact">Contacto</h3>
                     <p><i class="fas fa-map-marker-alt me-2"></i> Calle Principal #123, Ciudad de Panamá</p>
                     <p><i class="fas fa-phone me-2"></i> +507 123-4567</p>
                     <p><i class="fas fa-envelope me-2"></i> info@espiritudevidapanama.org</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2023 Ministerio Internacional Espíritu de Vida Panamá. Todos los derechos reservados.</p>
+                <p>© 2023 Ministerio Internacional Espíritu de Vida Panamá. <span data-translate="footer_rights">Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="translations.js"></script>
 </body>
 </html>
 

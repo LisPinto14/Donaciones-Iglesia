@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Ministerio Internacional Espíritu de Vida Panamá</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
@@ -64,10 +65,32 @@
 <body>
     <header class="header">
         <div class="container">
+            <!-- Language Selector Button - Top Right -->
+            <div class="language-button-container">
+                <button class="language-toggle-btn" id="languageToggleBtn">
+                    <i class="fas fa-globe"></i>
+                    <span class="current-lang">ES</span>
+                </button>
+                <div class="language-dropdown-menu" id="languageDropdown">
+                    <a href="#" class="language-option" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span>Español</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="en">
+                        <span class="flag">🇺🇸</span>
+                        <span>English</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="zh">
+                        <span class="flag">🇨🇳</span>
+                        <span>中文</span>
+                    </a>
+                </div>
+            </div>
+            
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand d-flex align-items-center" href="inicio.html">
-                        <img src="./assets/logos/logo.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
+                        <img src="./assets/logos/E.PTY.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
                         <span class="logo-text">Ministerio Internacional Espíritu de Vida Panamá</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -75,12 +98,24 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                            <li class="nav-item"><a class="nav-link" href="donaciones.html">Donaciones</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="inicio.html" data-translate="nav_home">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotros.html" data-translate="nav_about">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html" data-translate="nav_services">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="eventos.html" data-translate="nav_events">Eventos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html" data-translate="nav_contact">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donaciones.html" data-translate="nav_donations">Donaciones</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -99,25 +134,25 @@
                 <div class="carousel-item active">
                     <img src="https://picsum.photos/seed/church1/1920/600.jpg" class="d-block w-100" alt="Servicio de adoración">
                     <div class="carousel-caption">
-                        <h2>Bienvenidos a Casa</h2>
-                        <p>Un lugar donde encontrarás fe, esperanza y comunidad</p>
-                        <a href="nosotros.html" class="cta-button">Únete a nosotros</a>
+                        <h2 data-translate="carousel1_title">Bienvenidos a Espíritu de Vida</h2>
+                        <p data-translate="carousel1_text">Un lugar donde encontrarás fe, esperanza y comunidad</p>
+                        <a href="nosotros.html" class="cta-button" data-translate="cta_join">Únete a nosotros</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://picsum.photos/seed/church2/1920/600.jpg" class="d-block w-100" alt="Comunidad unida">
                     <div class="carousel-caption">
-                        <h2>Comunidad en Cristo</h2>
-                        <p>Creciendo juntos en fe y amor</p>
-                        <a href="servicios.html" class="cta-button">Ver horarios</a>
+                        <h2 data-translate="carousel2_title">Comunidad en Cristo</h2>
+                        <p data-translate="carousel2_text">Creciendo juntos en fe y amor</p>
+                        <a href="servicios.html" class="cta-button" data-translate="cta_schedule">Ver horarios</a>
                     </div>
                 </div>
                 <div class="carousel-item">
                     <img src="https://picsum.photos/seed/church3/1920/600.jpg" class="d-block w-100" alt="Servicio comunitario">
                     <div class="carousel-caption">
-                        <h2>Sirviendo con Amor</h2>
-                        <p>Extendiendo la mano a quienes más lo necesitan</p>
-                        <a href="eventos.html" class="cta-button">Próximos eventos</a>
+                        <h2 data-translate="carousel3_title">Sirviendo con Amor</h2>
+                        <p data-translate="carousel3_text">Extendiendo la mano a quienes más lo necesitan</p>
+                        <a href="eventos.html" class="cta-button" data-translate="cta_events">Próximos eventos</a>
                     </div>
                 </div>
             </div>
@@ -135,8 +170,10 @@
     <section class="home-intro">
         <div class="container">
             <div class="intro-box">
-                <h2 data-translate="home_intro_title">Bienvenidos a Casa</h2>
-                <p data-translate="home_intro_text">Información esencial sobre nuestra iglesia</p>
+                <h2 data-translate="home_intro_title">Bienvenidos a Ministerio Internacional Espíritu de Vida Panamá</h2>
+                <p data-translate="home_intro_text">Este es un espacio de fe, esperanza y crecimiento espiritual, donde trabajamos por formar discípulos comprometidos con el amor de Dios y el servicio a los demás.
+                    Creemos en la presencia constante del Señor y en la promesa de una gloria mayor para Su pueblo.
+                    Nos honra contar con su visita y compartir juntos este camino de bendición.</p>
             </div>
         </div>
     </section>
@@ -197,6 +234,78 @@
         </div>
     </section>
 
+    <!-- Inspirational Quote Section -->
+    <section class="quote-section">
+        <div class="container">
+            <div class="quote-text" data-translate="quote_text">"La gloria postrera de esta casa será mayor que la primera", dice el Señor de los ejércitos. "Y en este lugar daré la paz", dice el Señor de los ejércitos.</div>
+            <div class="quote-author" data-translate="quote_author">Hageo 2:9</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contacto">
+        <div class="container">
+            <h2 class="section-title" data-translate="contact_title">Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3 data-translate="contact_info_title">Información de Contacto</h3>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div>
+                            <h4 data-translate="contact_address_title">Dirección</h4>
+                            <p data-translate="contact_address"><div><br></div>XFHC+J7Q, Panamá, Provincia de Panamá<div><br></div></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h4 data-translate="contact_phone_title">Teléfono</h4>
+                            <p>+507 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                            <h4 data-translate="contact_email_title">Correo Electrónico</h4>
+                            <p>info@espiritudevidapanama.org</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div>
+                            <h4 data-translate="contact_hours_title">Horarios de Servicio</h4>
+                            <p data-translate="contact_hours">Domingos: 9:00 AM.<br>Miércoles: 7:00 PM.<br>Viernes: 7:00 PM.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3 data-translate="contact_form_title">Envíanos un Mensaje</h3>
+                    <form id="contactForm">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="Nombre" data-translate-placeholder="contact_name" required="">
+                            </div>
+                            <div class="col-md-6">
+                                <input type="email" class="form-control" placeholder="Correo Electrónico" data-translate-placeholder="contact_email" required="">
+                            </div>
+                        </div>
+                        <input type="text" class="form-control" placeholder="Asunto" data-translate-placeholder="contact_subject" required="">
+                        <textarea class="form-control" rows="5" placeholder="Tu Mensaje" data-translate-placeholder="contact_message" required=""></textarea>
+                        <button type="submit" class="submit-btn" data-translate="contact_submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="row">
@@ -213,11 +322,11 @@
                 <div class="col-md-4">
                     <h3 class="footer-title">Enlaces Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="nosotros.html">Acerca de Nosotros</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="donaciones.html">Donaciones</a></li>
+                        <li><a href="nosotros.html" data-translate="footer_about_link">Acerca de Nosotros</a></li>
+                        <li><a href="servicios.html" data-translate="footer_services_link">Servicios</a></li>
+                        <li><a href="eventos.html" data-translate="footer_events_link">Eventos</a></li>
+                        <li><a href="donaciones.html" data-translate="footer_donations_link">Donaciones</a></li>
+                        <li><a href="contacto.html" data-translate="footer_contact_link">Contacto</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -235,6 +344,254 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="translations.js"></script>
+    <script>
+        // Translation data
+        const translations = {
+            es: {
+                nav_home: "Inicio",
+                nav_about: "Nosotros",
+                nav_services: "Servicios",
+                nav_events: "Eventos",
+                nav_contact: "Contacto",
+                nav_donations: "Donaciones",
+                carousel1_title: "Bienvenidos a Casa",
+                carousel1_text: "Un lugar donde encontrarás fe, esperanza y comunidad",
+                carousel2_title: "Comunidad en Cristo",
+                carousel2_text: "Creciendo juntos en fe y amor",
+                carousel3_title: "Sirviendo con Amor",
+                carousel3_text: "Extendiendo la mano a quienes más lo necesitan",
+                cta_join: "Únete a nosotros",
+                cta_schedule: "Ver horarios",
+                cta_events: "Próximos eventos",
+                cta_learn_more: "Conoce más",
+                about_title: "Acerca de Nosotros",
+                about_subtitle: "Nuestra Misión",
+                about_mission: "En Ministerio Internacional Espíritu de Vida Panamá, nuestra misión es compartir el amor de Cristo con todos, creando una comunidad vibrante donde cada persona pueda experimentar el poder transformador del Espíritu Santo. Buscamos ser un faro de esperanza en nuestra ciudad y más allá.",
+                about_vision_title: "Nuestra Visión",
+                about_vision: "Nuestra visión es ver vidas transformadas por el evangelio, familias restauradas y comunidades impactadas por el amor de Dios. Nos esforzamos por ser una iglesia relevante que conecte la fe con la vida cotidiana.",
+                about_beliefs_title: "Nuestras Creencias",
+                about_beliefs: "Creemos en la Biblia como la Palabra inspirada de Dios, en la salvación a través de Jesucristo, y en el poder del Espíritu Santo para guiar y capacitar a los creyentes. Valoramos la adoración, la comunidad y el servicio como expresiones de nuestra fe.",
+                services_title: "Nuestros Servicios",
+                service1_title: "Culto Dominical",
+                service1_time: "Domingos a las 10:00 am",
+                service1_desc: "Únete a nosotros para un tiempo de adoración, alabanza y una palabra profética que fortalecerá tu fe y renovará tu esperanza.",
+                service2_title: "Célular",
+                service2_time: "Martes a las 7:00 pm",
+                service2_desc: "Reuniones en los hogares para compartir, orar y crecer juntos en la fe en un ambiente familiar y de comunión.",
+                service3_title: "Estudio Bíblico",
+                service3_time: "Miércoles a las 7:00 pm",
+                service3_desc: "Profundiza en las Escrituras y descubre los tesoros de la sabiduría divina para aplicarlos a tu vida diaria.",
+                service4_title: "Reunión de Oración",
+                service4_time: "Viernes a las 7:00 pm",
+                service4_desc: "Un poderoso tiempo de intercesión donde clamamos por las necesidades de nuestra comunidad, nación y el mundo.",
+                events_title: "Eventos del Mes",
+                event1_title: "Santa Cena",
+                event1_date: "Domingo 12 de octubre",
+                event1_time: "10:00 am",
+                event1_desc: "Conmemoramos el sacrificio de Jesús en una mesa de comunión, reflexión y renovación de nuestra alianza con Dios.",
+                event2_title: "Vigilia",
+                event2_date: "Viernes 17 de octubre",
+                event2_time: "7:00 pm",
+                event2_desc: "Una noche de búsqueda incesante de la presencia de Dios a través de la oración, alabanza y la palabra.",
+                event3_title: "Culto Juvenil",
+                event3_date: "Sábado 18 de octubre",
+                event3_time: "4:00 pm",
+                event3_desc: "Un espacio dinámico diseñado para los jóvenes, con música contemporánea, mensajes relevantes y actividades que fortalecen su fe.",
+                event4_title: "Clínica Espiritual",
+                event4_date: "Sábado 8 a Domingo 9 de noviembre",
+                event4_time: "6:00 am",
+                event4_desc: "Un fin de semana de inmersión espiritual con enseñanzas profundas, oración y ministración para sanidad y liberación.",
+                quote_text: "\"La gloria postrera de esta casa será mayor que la primera\", dice el Señor de los ejércitos. \"Y en este lugar daré la paz\", dice el Señor de los ejércitos.",
+                quote_author: "Hageo 2:9",
+                contact_title: "Contacto",
+                contact_info_title: "Información de Contacto",
+                contact_address_title: "Dirección",
+                contact_address: "Calle Principal #123, Ciudad de Panamá, Panamá",
+                contact_phone_title: "Teléfono",
+                contact_email_title: "Correo Electrónico",
+                contact_hours_title: "Horarios de Servicio",
+                contact_hours: "Domingos: 9:00 AM y 11:00 AM<br>Miércoles: 7:00 PM",
+                contact_form_title: "Envíanos un Mensaje",
+                contact_name: "Nombre",
+                contact_email: "Correo Electrónico",
+                contact_subject: "Asunto",
+                contact_message: "Tu Mensaje",
+                contact_submit: "Enviar Mensaje",
+                footer_about: "Sobre Nosotros",
+                footer_about_text: "Ministerio Internacional Espíritu de Vida Panamá es una comunidad cristiana comprometida con compartir el amor de Cristo y transformar vidas a través del evangelio.",
+                footer_links: "Enlaces Rápidos",
+                footer_about_link: "Acerca de Nosotros",
+                footer_services_link: "Servicios",
+                footer_events_link: "Eventos",
+                footer_donations_link: "Donaciones",
+                footer_contact_link: "Contacto",
+                footer_contact: "Contacto",
+                footer_rights: "Todos los derechos reservados."
+            },
+            en: {
+                nav_home: "Home",
+                nav_about: "About",
+                nav_services: "Services",
+                nav_events: "Events",
+                nav_contact: "Contact",
+                nav_donations: "Donations",
+                carousel1_title: "Welcome Home",
+                carousel1_text: "A place where you'll find faith, hope and community",
+                carousel2_title: "Community in Christ",
+                carousel2_text: "Growing together in faith and love",
+                carousel3_title: "Serving with Love",
+                carousel3_text: "Reaching out to those in need",
+                cta_join: "Join Us",
+                cta_schedule: "View Schedule",
+                cta_events: "Upcoming Events",
+                cta_learn_more: "Learn More",
+                about_title: "About Us",
+                about_subtitle: "Our Mission",
+                about_mission: "At International Ministry Spirit of Life Panama, our mission is to share the love of Christ with everyone, creating a vibrant community where each person can experience the transformative power of the Holy Spirit. We seek to be a beacon of hope in our city and beyond.",
+                about_vision_title: "Our Vision",
+                about_vision: "Our vision is to see lives transformed by the gospel, families restored, and communities impacted by God's love. We strive to be a relevant church that connects faith with everyday life.",
+                about_beliefs_title: "Our Beliefs",
+                about_beliefs: "We believe in the Bible as the inspired Word of God, in salvation through Jesus Christ, and in the power of the Holy Spirit to guide and equip believers. We value worship, community, and service as expressions of our faith.",
+                services_title: "Our Services",
+                service1_title: "Sunday Service",
+                service1_time: "Sundays at 10:00 am",
+                service1_desc: "Join us for a time of worship, praise, and a prophetic word that will strengthen your faith and renew your hope.",
+                service2_title: "Cell Group",
+                service2_time: "Tuesdays at 7:00 pm",
+                service2_desc: "Home meetings to share, pray, and grow together in faith in a family and fellowship environment.",
+                service3_title: "Bible Study",
+                service3_time: "Wednesdays at 7:00 pm",
+                service3_desc: "Deepen in the Scriptures and discover the treasures of divine wisdom to apply them to your daily life.",
+                service4_title: "Prayer Meeting",
+                service4_time: "Fridays at 7:00 pm",
+                service4_desc: "A powerful time of intercession where we cry out for the needs of our community, nation, and the world.",
+                events_title: "Events of the Month",
+                event1_title: "Holy Communion",
+                event1_date: "Sunday, October 12th",
+                event1_time: "10:00 am",
+                event1_desc: "We commemorate the sacrifice of Jesus at a table of communion, reflection, and renewal of our covenant with God.",
+                event2_title: "Vigil",
+                event2_date: "Friday, October 17th",
+                event2_time: "7:00 pm",
+                event2_desc: "A night of relentless seeking of God's presence through prayer, praise, and the Word.",
+                event3_title: "Youth Service",
+                event3_date: "Saturday, October 18th",
+                event3_time: "4:00 pm",
+                event3_desc: "A dynamic space designed for young people, with contemporary music, relevant messages, and activities that strengthen their faith.",
+                event4_title: "Spiritual Clinic",
+                event4_date: "Saturday, Nov 8th to Sunday, Nov 9th",
+                event4_time: "6:00 am",
+                event4_desc: "A weekend of spiritual immersion with deep teachings, prayer, and ministry for healing and deliverance.",
+                quote_text: "\"The glory of this present house will be greater than the glory of the former house,\" says the Lord Almighty. \"And in this place I will grant peace,\" says the Lord Almighty.",
+                quote_author: "Haggai 2:9",
+                contact_title: "Contact",
+                contact_info_title: "Contact Information",
+                contact_address_title: "Address",
+                contact_address: "Main Street #123, Panama City, Panama",
+                contact_phone_title: "Phone",
+                contact_email_title: "Email",
+                contact_hours_title: "Service Hours",
+                contact_hours: "Sundays: 9:00 AM and 11:00 AM<br>Wednesdays: 7:00 PM",
+                contact_form_title: "Send Us a Message",
+                contact_name: "Name",
+                contact_email: "Email",
+                contact_subject: "Subject",
+                contact_message: "Your Message",
+                contact_submit: "Send Message",
+                footer_about: "About Us",
+                footer_about_text: "International Ministry Spirit of Life Panama is a Christian community committed to sharing the love of Christ and transforming lives through the gospel.",
+                footer_links: "Quick Links",
+                footer_about_link: "About Us",
+                footer_services_link: "Services",
+                footer_events_link: "Events",
+                footer_donations_link: "Donations",
+                footer_contact_link: "Contact",
+                footer_contact: "Contact",
+                footer_rights: "All rights reserved."
+            },
+            zh: {
+                nav_home: "首页",
+                nav_about: "关于我们",
+                nav_services: "服务",
+                nav_events: "活动",
+                nav_contact: "联系我们",
+                nav_donations: "捐款",
+                carousel1_title: "欢迎回家",
+                carousel1_text: "一个您能找到信仰、希望和社区的地方",
+                carousel2_title: "基督里的社区",
+                carousel2_text: "在信仰和爱中共同成长",
+                carousel3_title: "用爱服务",
+                carousel3_text: "向有需要的人伸出援手",
+                cta_join: "加入我们",
+                cta_schedule: "查看时间表",
+                cta_events: "即将举行的活动",
+                cta_learn_more: "了解更多",
+                about_title: "关于我们",
+                about_subtitle: "我们的使命",
+                about_mission: "在巴拿马国际生命之灵事工，我们的使命是与每个人分享基督的爱，创建一个充满活力的社区，让每个人都能体验圣灵的变革力量。我们寻求成为我们城市及更远地区的希望灯塔。",
+                about_vision_title: "我们的愿景",
+                about_vision: "我们的愿景是看到生命被福音改变，家庭得到恢复，社区被上帝的爱所影响。我们努力成为一个相关的教会，将信仰与日常生活联系起来。",
+                about_beliefs_title: "我们的信仰",
+                about_beliefs: "我们相信圣经是上帝启示的话语，通过耶稣基督得救，以及圣灵引导和装备信徒的力量。我们重视敬拜、社区和服务作为我们信仰的表达。",
+                services_title: "我们的服务",
+                service1_title: "主日崇拜",
+                service1_time: "周日上午10:00",
+                service1_desc: "加入我们进行敬拜、赞美和预言话语的时间，这将加强你的信心并更新你的希望。",
+                service2_title: "小组聚会",
+                service2_time: "周二晚上7:00",
+                service2_desc: "在家庭聚会中分享、祈祷和一起在信仰中成长，在家庭和团契的环境中。",
+                service3_title: "圣经学习",
+                service3_time: "周三晚上7:00",
+                service3_desc: "深入圣经，发现神圣智慧的宝藏，将其应用到你的日常生活中。",
+                service4_title: "祷告会",
+                service4_time: "周五晚上7:00",
+                service4_desc: "一个强有力的代祷时间，我们为社区、国家和世界的需要呼求。",
+                events_title: "本月活动",
+                event1_title: "圣餐",
+                event1_date: "10月12日星期日",
+                event1_time: "上午10:00",
+                event1_desc: "我们在圣餐桌上纪念耶稣的牺牲，反思和更新我们与上帝的盟约。",
+                event2_title: "守夜",
+                event2_date: "10月17日星期五",
+                event2_time: "晚上7:00",
+                event2_desc: "一个通过祷告、赞美和话语不断寻求上帝同在的夜晚。",
+                event3_title: "青年崇拜",
+                event3_date: "10月18日星期六",
+                event3_time: "下午4:00",
+                event3_desc: "一个为年轻人设计的动态空间，有当代音乐、相关信息和加强他们信仰的活动。",
+                event4_title: "属灵诊所",
+                event4_date: "11月8-9日星期六至星期日",
+                event4_time: "上午6:00",
+                event4_desc: "一个属灵沉浸的周末，有深刻的教导、祷告和医治释放的服事。",
+                quote_text: "\"这殿后来的荣耀必大过先前的荣耀\"，万军之耶和华说。\"在这地方我必赐平安\"，万军之耶和华说。",
+                quote_author: "哈该书2:9",
+                contact_title: "联系我们",
+                contact_info_title: "联系信息",
+                contact_address_title: "地址",
+                contact_address: "主街#123，巴拿马城，巴拿马",
+                contact_phone_title: "电话",
+                contact_email_title: "电子邮件",
+                contact_hours_title: "服务时间",
+                contact_hours: "周日：上午9:00和11:00<br>周三：晚上7:00",
+                contact_form_title: "发送消息",
+                contact_name: "姓名",
+                contact_email: "电子邮件",
+                contact_subject: "主题",
+                contact_message: "您的消息",
+                contact_submit: "发送消息",
+                footer_about: "关于我们",
+                footer_about_text: "巴拿马国际生命之灵事工是一个致力于分享基督的爱并通过福音改变生命的基督教社区。",
+                footer_links: "快速链接",
+                footer_about_link: "关于我们",
+                footer_services_link: "服务",
+                footer_events_link: "活动",
+                footer_donations_link: "捐款",
+                footer_contact_link: "联系我们",
+                footer_contact: "联系我们",
+                footer_rights: "版权所有。"
+            }
+        };
+    </script>
 </body>
 </html>
 

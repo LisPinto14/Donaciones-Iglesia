@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eventos - Ministerio Internacional Espíritu de Vida Panamá</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@400;700&amp;display=swap" rel="stylesheet">
@@ -34,6 +35,14 @@
         .event-info i{color:var(--secondary-color);margin-right:10px}
         .event-date,.event-time{font-size:1rem;color:var(--text-color);margin-bottom:5px}
         .event-description{color:var(--text-color);font-size:.95rem}
+        .events-controls{display:flex !important;justify-content:center;gap:15px;margin-bottom:30px;flex-wrap:wrap;align-items:center;padding:20px 0;visibility:visible !important;opacity:1 !important}
+        .events-controls button{background-color:var(--secondary-color);color:var(--primary-color);border:none;padding:12px 24px;border-radius:25px;font-weight:600;cursor:pointer;transition:all .3s ease;font-size:.95rem;display:inline-flex !important;align-items:center;gap:8px;visibility:visible !important;opacity:1 !important;min-width:150px;justify-content:center}
+        .events-controls button:hover{background-color:var(--dark-gold);transform:translateY(-2px);box-shadow:0 4px 10px rgba(212,175,55,.3)}
+        .events-controls button.active{background-color:var(--primary-color);color:var(--secondary-color);border:2px solid var(--secondary-color)}
+        .events-controls .filter-toggle{background-color:var(--primary-color) !important;color:#fff !important;border:2px solid var(--primary-color) !important}
+        .events-controls .filter-toggle.active{background-color:var(--secondary-color) !important;color:var(--primary-color) !important;border:2px solid var(--secondary-color) !important}
+        .events-controls .sort-btn{background-color:var(--secondary-color) !important;color:var(--primary-color) !important;border:2px solid var(--secondary-color) !important}
+        .events-controls .sort-btn.active{background-color:var(--primary-color) !important;color:var(--secondary-color) !important;border:2px solid var(--secondary-color) !important}
         .footer{background-color:var(--primary-color);color:#fff;padding:60px 0 20px;margin-top:40px}
         .footer-title{color:var(--secondary-color);margin-bottom:25px;font-size:1.5rem}
         .social-icons{display:flex;gap:15px;margin-bottom:30px}
@@ -49,10 +58,32 @@
 <body>
     <header class="header">
         <div class="container">
+            <!-- Language Selector Button - Top Right -->
+            <div class="language-button-container">
+                <button class="language-toggle-btn" id="languageToggleBtn">
+                    <i class="fas fa-globe"></i>
+                    <span class="current-lang">ES</span>
+                </button>
+                <div class="language-dropdown-menu" id="languageDropdown">
+                    <a href="#" class="language-option" data-lang="es">
+                        <span class="flag">🇪🇸</span>
+                        <span>Español</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="en">
+                        <span class="flag">🇺🇸</span>
+                        <span>English</span>
+                    </a>
+                    <a href="#" class="language-option" data-lang="zh">
+                        <span class="flag">🇨🇳</span>
+                        <span>中文</span>
+                    </a>
+                </div>
+            </div>
+            
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
                     <a class="navbar-brand d-flex align-items-center" href="inicio.html">
-                        <img src="./assets/logos/logo.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
+                        <img src="./assets/logos/E.PTY.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá" class="logo">
                         <span class="logo-text">Ministerio Internacional Espíritu de Vida Panamá</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,12 +91,24 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item"><a class="nav-link" href="inicio.html">Inicio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-                            <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
-                            <li class="nav-item"><a class="nav-link" href="eventos.html">Eventos</a></li>
-                            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-                            <li class="nav-item"><a class="nav-link" href="donaciones.html">Donaciones</a></li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="inicio.html" data-translate="nav_home">Inicio</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="nosotros.html" data-translate="nav_about">Nosotros</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="servicios.html" data-translate="nav_services">Servicios</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="eventos.html" data-translate="nav_events">Eventos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contacto.html" data-translate="nav_contact">Contacto</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="donaciones.html" data-translate="nav_donations">Donaciones</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -75,46 +118,63 @@
 
     <section class="events-section" id="eventos">
         <div class="container">
-            <h2 class="section-title">Eventos del Mes</h2>
-            <div class="events-grid">
-                <div class="event-card">
-                    <div class="event-header"><h3 class="event-title">Santa Cena</h3></div>
+            <h2 class="section-title" data-translate="events_title">Eventos del Mes</h2>
+            
+            <!-- Controls for sorting and filtering -->
+            <div class="events-controls" style="display: flex !important; visibility: visible !important;">
+                <button type="button" id="filterCurrentMonth" class="filter-toggle active" style="display: inline-flex !important; visibility: visible !important;">
+                    <i class="fas fa-calendar-check"></i> <span data-translate="filter_current_month">Mes Actual</span>
+                </button>
+                <button type="button" id="showAllEvents" class="filter-toggle" style="display: inline-flex !important; visibility: visible !important;">
+                    <i class="fas fa-list"></i> <span data-translate="show_all_events">Todos los Eventos</span>
+                </button>
+                <button type="button" id="sortOldest" class="sort-btn" style="display: inline-flex !important; visibility: visible !important;">
+                    <i class="fas fa-sort-amount-down"></i> <span data-translate="sort_oldest">Más Antiguos</span>
+                </button>
+                <button type="button" id="sortNewest" class="sort-btn active" style="display: inline-flex !important; visibility: visible !important;">
+                    <i class="fas fa-sort-amount-up"></i> <span data-translate="sort_newest">Más Recientes</span>
+                </button>
+            </div>
+            
+            <div class="events-grid" id="eventsGrid">
+                <div class="event-card" data-date="2024-10-12" data-time="10:00">
+                    <div class="event-header"><h3 class="event-title" data-translate="event1_title">Santa Cena</h3></div>
                     <div class="event-body">
                         <div class="event-info">
-                            <p class="event-date"><i class="fas fa-calendar-alt"></i> Domingo 12 de octubre</p>
-                            <p class="event-time"><i class="fas fa-clock"></i> 10:00 am</p>
+                            <p class="event-date"><i class="fas fa-calendar-alt"></i> <span data-translate="event1_date">Domingo 12 de octubre</span></p>
+                            <p class="event-time"><i class="fas fa-clock"></i> <span data-translate="event1_time">10:00 am</span></p>
                         </div>
-                        <p class="event-description">Conmemoramos el sacrificio de Jesús en una mesa de comunión, reflexión y renovación de nuestra alianza con Dios.</p>
+                        <p class="event-description" data-translate="event1_desc">Conmemoramos el sacrificio de Jesús en una mesa de comunión, reflexión y renovación de nuestra alianza con Dios.</p>
                     </div>
                 </div>
-                <div class="event-card">
-                    <div class="event-header"><h3 class="event-title">Vigilia</h3></div>
+                <div class="event-card" data-date="2024-10-17" data-time="19:00">
+                    <div class="event-header"><h3 class="event-title" data-translate="event2_title">Vigilia</h3></div>
                     <div class="event-body">
                         <div class="event-info">
-                            <p class="event-date"><i class="fas fa-calendar-alt"></i> Viernes 17 de octubre</p>
-                            <p class="event-time"><i class="fas fa-clock"></i> 7:00 pm</p>
+                            <p class="event-date"><i class="fas fa-calendar-alt"></i> <span data-translate="event2_date">Viernes 17 de octubre</span></p>
+                            <p class="event-time"><i class="fas fa-clock"></i> <span data-translate="event2_time">7:00 pm</span></p>
                         </div>
-                        <p class="event-description">Una noche de búsqueda incesante de la presencia de Dios a través de la oración, alabanza y la palabra.</p>
+                        <p class="event-description" data-translate="event2_desc">Una noche de búsqueda incesante de la presencia de Dios a través de la oración, alabanza y la palabra.</p>
                     </div>
                 </div>
-                <div class="event-card">
-                    <div class="event-header"><h3 class="event-title">Culto Juvenil</h3></div>
+                <div class="event-card" data-date="2024-10-18" data-time="16:00">
+                    <div class="event-header"><h3 class="event-title" data-translate="event3_title">Culto Juvenil</h3></div>
                     <div class="event-body">
                         <div class="event-info">
-                            <p class="event-date"><i class="fas fa-calendar-alt"></i> Sábado 18 de octubre</p>
-                            <p class="event-time"><i class="fas fa-clock"></i> 4:00 pm</p>
+                            <p class="event-date"><i class="fas fa-calendar-alt"></i> <span data-translate="event3_date">Sábado 18 de octubre</span></p>
+                            <p class="event-time"><i class="fas fa-clock"></i> <span data-translate="event3_time">4:00 pm</span></p>
                         </div>
-                        <p class="event-description">Un espacio dinámico diseñado para los jóvenes, con música contemporánea, mensajes relevantes y actividades que fortalecen su fe.</p>
+                        <p class="event-description" data-translate="event3_desc">Un espacio dinámico diseñado para los jóvenes, con música contemporánea, mensajes relevantes y actividades que fortalecen su fe.</p>
                     </div>
                 </div>
-                <div class="event-card">
-                    <div class="event-header"><h3 class="event-title">Clínica Espiritual</h3></div>
+                <div class="event-card" data-date="2024-11-08" data-time="06:00">
+                    <div class="event-header"><h3 class="event-title" data-translate="event4_title">Clínica Espiritual</h3></div>
                     <div class="event-body">
                         <div class="event-info">
-                            <p class="event-date"><i class="fas fa-calendar-alt"></i> Sábado 8 a Domingo 9 de noviembre</p>
-                            <p class="event-time"><i class="fas fa-clock"></i> 6:00 am</p>
+                            <p class="event-date"><i class="fas fa-calendar-alt"></i> <span data-translate="event4_date">Sábado 8 a Domingo 9 de noviembre</span></p>
+                            <p class="event-time"><i class="fas fa-clock"></i> <span data-translate="event4_time">6:00 am</span></p>
                         </div>
-                        <p class="event-description">Un fin de semana de inmersión espiritual con enseñanzas profundas, oración y ministración para sanidad y liberación.</p>
+                        <p class="event-description" data-translate="event4_desc">Un fin de semana de inmersión espiritual con enseñanzas profundas, oración y ministración para sanidad y liberación.</p>
                     </div>
                 </div>
             </div>
@@ -125,8 +185,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h3 class="footer-title">Sobre Nosotros</h3>
-                    <p>Ministerio Internacional Espíritu de Vida Panamá es una comunidad cristiana comprometida con hacer discípulos y enseñar las enseñanzas de Cristo, cumpliendo la misión que Él nos dejó en Mateo 28:19-20</p>
+                    <h3 class="footer-title" data-translate="footer_about">Sobre Nosotros</h3>
+                    <p data-translate="footer_about_text">Ministerio Internacional Espíritu de Vida Panamá es una comunidad cristiana comprometida con hacer discípulos y enseñar las enseñanzas de Cristo, cumpliendo la misión que Él nos dejó en Mateo 28:19-20</p>
                     <div class="social-icons">
                         <a href="https://www.instagram.com/ministerioespiritudevidapty" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
                         <a href="https://www.facebook.com/Espiritu%20de%20Vida%20Panam%C3%A1" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
@@ -135,29 +195,135 @@
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="footer-title">Enlaces Rápidos</h3>
+                    <h3 class="footer-title" data-translate="footer_links">Enlaces Rápidos</h3>
                     <ul class="footer-links">
-                        <li><a href="nosotros.html">Acerca de Nosotros</a></li>
-                        <li><a href="servicios.html">Servicios</a></li>
-                        <li><a href="eventos.html">Eventos</a></li>
-                        <li><a href="contacto.html">Contacto</a></li>
-                        <li><a href="donaciones.html">Donaciones</a></li>
+                        <li><a href="nosotros.html" data-translate="footer_about_link">Acerca de Nosotros</a></li>
+                        <li><a href="servicios.html" data-translate="footer_services_link">Servicios</a></li>
+                        <li><a href="eventos.html" data-translate="footer_events_link">Eventos</a></li>
+                        <li><a href="contacto.html" data-translate="footer_contact_link">Contacto</a></li>
+                        <li><a href="donaciones.html" data-translate="footer_donations_link">Donaciones</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h3 class="footer-title">Contacto</h3>
+                    <h3 class="footer-title" data-translate="footer_contact">Contacto</h3>
                     <p><i class="fas fa-map-marker-alt me-2"></i> Calle Principal #123, Ciudad de Panamá</p>
                     <p><i class="fas fa-phone me-2"></i> +507 123-4567</p>
                     <p><i class="fas fa-envelope me-2"></i> info@espiritudevidapanama.org</p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2023 Ministerio Internacional Espíritu de Vida Panamá. Todos los derechos reservados.</p>
+                <p>© 2023 Ministerio Internacional Espíritu de Vida Panamá. <span data-translate="footer_rights">Todos los derechos reservados.</span></p>
             </div>
         </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="translations.js"></script>
+    <script>
+        // Event sorting and filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const eventsGrid = document.getElementById('eventsGrid');
+            const filterCurrentMonthBtn = document.getElementById('filterCurrentMonth');
+            const showAllEventsBtn = document.getElementById('showAllEvents');
+            const sortOldestBtn = document.getElementById('sortOldest');
+            const sortNewestBtn = document.getElementById('sortNewest');
+            
+            let currentFilter = 'currentMonth'; // 'currentMonth' or 'all'
+            let currentSort = 'newest'; // 'oldest' or 'newest'
+            
+            // Get current month and year
+            const now = new Date();
+            const currentMonth = now.getMonth(); // 0-11
+            const currentYear = now.getFullYear();
+            
+            // Store original events (clone them to preserve original structure)
+            const originalEvents = Array.from(eventsGrid.querySelectorAll('.event-card')).map(event => event.cloneNode(true));
+            
+            // Get all event cards from original
+            function getAllEvents() {
+                return originalEvents.map(event => event.cloneNode(true));
+            }
+            
+            // Filter events by current month/year
+            function filterByCurrentMonth(events) {
+                return events.filter(event => {
+                    const dateStr = event.getAttribute('data-date');
+                    if (!dateStr) return false;
+                    
+                    const eventDate = new Date(dateStr);
+                    return eventDate.getMonth() === currentMonth && eventDate.getFullYear() === currentYear;
+                });
+            }
+            
+            // Sort events by date
+            function sortEvents(events, order) {
+                return events.sort((a, b) => {
+                    const dateA = new Date(a.getAttribute('data-date') + 'T' + a.getAttribute('data-time'));
+                    const dateB = new Date(b.getAttribute('data-date') + 'T' + b.getAttribute('data-time'));
+                    
+                    if (order === 'oldest') {
+                        return dateA - dateB;
+                    } else {
+                        return dateB - dateA;
+                    }
+                });
+            }
+            
+            // Render events
+            function renderEvents() {
+                let events = getAllEvents();
+                
+                // Filter
+                if (currentFilter === 'currentMonth') {
+                    events = filterByCurrentMonth(events);
+                }
+                
+                // Sort
+                events = sortEvents(events, currentSort);
+                
+                // Clear grid
+                eventsGrid.innerHTML = '';
+                
+                // Append sorted and filtered events
+                events.forEach(event => {
+                    eventsGrid.appendChild(event);
+                });
+            }
+            
+            // Filter button handlers
+            filterCurrentMonthBtn.addEventListener('click', function() {
+                currentFilter = 'currentMonth';
+                filterCurrentMonthBtn.classList.add('active');
+                showAllEventsBtn.classList.remove('active');
+                renderEvents();
+            });
+            
+            showAllEventsBtn.addEventListener('click', function() {
+                currentFilter = 'all';
+                showAllEventsBtn.classList.add('active');
+                filterCurrentMonthBtn.classList.remove('active');
+                renderEvents();
+            });
+            
+            // Sort button handlers
+            sortOldestBtn.addEventListener('click', function() {
+                currentSort = 'oldest';
+                sortOldestBtn.classList.add('active');
+                sortNewestBtn.classList.remove('active');
+                renderEvents();
+            });
+            
+            sortNewestBtn.addEventListener('click', function() {
+                currentSort = 'newest';
+                sortNewestBtn.classList.add('active');
+                sortOldestBtn.classList.remove('active');
+                renderEvents();
+            });
+            
+            // Initial render
+            renderEvents();
+        });
+    </script>
 </body>
 </html>
 

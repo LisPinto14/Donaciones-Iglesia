@@ -47,6 +47,10 @@ const translations = {
     
     // Events Section
     events_title: "Eventos del Mes",
+    filter_current_month: "Mes Actual",
+    show_all_events: "Todos los Eventos",
+    sort_oldest: "Más Antiguos",
+    sort_newest: "Más Recientes",
     event1_title: "Santa Cena",
     event1_date: "Domingo 12 de octubre",
     event1_time: "10:00 am",
@@ -83,6 +87,23 @@ const translations = {
     contact_subject: "Asunto",
     contact_message: "Tu Mensaje",
     contact_submit: "Enviar Mensaje",
+    
+    // Donations Section
+    donations_title: "Donaciones",
+    donations_verse: "Proverbios 11:25",
+    donations_subtitle: "Vive de manera generosa con todo lo que Dios te ha dado.",
+    donation1_title: "Transferencia Bancaria",
+    donation_account_holder: "Titular:",
+    donation_bank: "Banco:",
+    donation_account_type: "Tipo de cuenta:",
+    donation_account_type_value: "Cuenta Corriente",
+    donation_account_number: "Número de cuenta:",
+    donation1_note: "Por favor, envíanos el comprobante para confirmar tu donación.",
+    donation2_title: "Donación Presencial",
+    donation2_desc: "Puedes donar en nuestros servicios.",
+    donation2_note: "Pregunta por los sobres de ofrendas a nuestro equipo de servidores en el templo.",
+    donation3_title: "Contacto para Ayuda",
+    donation3_desc: "Si necesitas asistencia para donar, contáctanos.",
     
     // Footer
     footer_about: "Sobre Nosotros",
@@ -143,6 +164,10 @@ const translations = {
     
     // Events Section
     events_title: "Events of the Month",
+    filter_current_month: "Current Month",
+    show_all_events: "All Events",
+    sort_oldest: "Oldest First",
+    sort_newest: "Newest First",
     event1_title: "Holy Communion",
     event1_date: "Sunday, October 12th",
     event1_time: "10:00 am",
@@ -179,6 +204,23 @@ const translations = {
     contact_subject: "Subject",
     contact_message: "Your Message",
     contact_submit: "Send Message",
+    
+    // Donations Section
+    donations_title: "Donations",
+    donations_verse: "Proverbs 11:25",
+    donations_subtitle: "Live generously with everything God has given you.",
+    donation1_title: "Bank Transfer",
+    donation_account_holder: "Account Holder:",
+    donation_bank: "Bank:",
+    donation_account_type: "Account Type:",
+    donation_account_type_value: "Checking Account",
+    donation_account_number: "Account Number:",
+    donation1_note: "Please send us the receipt to confirm your donation.",
+    donation2_title: "In-Person Donation",
+    donation2_desc: "You can donate at our services.",
+    donation2_note: "Ask for offering envelopes from our serving team at the temple.",
+    donation3_title: "Contact for Help",
+    donation3_desc: "If you need assistance to donate, contact us.",
     
     // Footer
     footer_about: "About Us",
@@ -239,6 +281,10 @@ const translations = {
     
     // Events Section
     events_title: "本月活动",
+    filter_current_month: "本月",
+    show_all_events: "所有活动",
+    sort_oldest: "最早",
+    sort_newest: "最新",
     event1_title: "圣餐",
     event1_date: "10月12日星期日",
     event1_time: "上午10:00",
@@ -275,6 +321,23 @@ const translations = {
     contact_subject: "主题",
     contact_message: "您的消息",
     contact_submit: "发送消息",
+    
+    // Donations Section
+    donations_title: "捐款",
+    donations_verse: "箴言 11:25",
+    donations_subtitle: "慷慨地生活，用上帝赐给你的一切。",
+    donation1_title: "银行转账",
+    donation_account_holder: "账户持有人:",
+    donation_bank: "银行:",
+    donation_account_type: "账户类型:",
+    donation_account_type_value: "活期账户",
+    donation_account_number: "账户号码:",
+    donation1_note: "请发送收据给我们以确认您的捐款。",
+    donation2_title: "现场捐款",
+    donation2_desc: "您可以在我们的服务中捐款。",
+    donation2_note: "在圣殿向我们的服务团队询问奉献信封。",
+    donation3_title: "联系帮助",
+    donation3_desc: "如果您需要捐款帮助，请联系我们。",
     
     // Footer
     footer_about: "关于我们",
