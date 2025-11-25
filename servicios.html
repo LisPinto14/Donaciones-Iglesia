@@ -242,6 +242,16 @@
             text-align: center;
             color: rgba(255, 255, 255, .5)
         }
+        
+        /* Language Selector Styles */
+        .language-button-container { position: absolute; top: 20px; right: 20px; z-index: 1001; }
+        .language-toggle-btn { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(212, 175, 55, 0.3); color: white; padding: 8px 12px; border-radius: 25px; cursor: pointer; display: flex; align-items: center; gap: 8px; transition: all 0.3s ease; backdrop-filter: blur(10px); }
+        .language-toggle-btn:hover { background: var(--secondary-color); color: var(--primary-color); transform: translateY(-2px); }
+        .language-dropdown-menu { position: absolute; top: 100%; right: 0; background: white; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.2); min-width: 150px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1002; }
+        .language-dropdown-menu.show { opacity: 1; visibility: visible; transform: translateY(0); }
+        .language-option { display: flex; align-items: center; gap: 10px; padding: 12px 16px; color: var(--text-color); text-decoration: none; transition: all 0.3s ease; }
+        .language-option:hover { background: var(--light-bg); color: var(--primary-color); }
+        .language-option .flag { font-size: 1.2rem; }
     </style>
 </head>
 
@@ -272,7 +282,7 @@
             
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                    <a class="navbar-brand d-flex align-items-center" href="inicio.html">
+                    <a class="navbar-brand d-flex align-items-center" href="index.html">
                         <img src="./assets/logos/E.PTY.png" alt="Logo Ministerio Internacional Espíritu de Vida Panamá"
                             class="logo">
                         <span class="logo-text">Ministerio Internacional Espíritu de Vida Panamá</span>
@@ -283,24 +293,12 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="inicio.html" data-translate="nav_home">Inicio</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="nosotros.html" data-translate="nav_about">Nosotros</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="servicios.html" data-translate="nav_services">Servicios</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="eventos.html" data-translate="nav_events">Eventos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="contacto.html" data-translate="nav_contact">Contacto</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="donaciones.html" data-translate="nav_donations">Donaciones</a>
-                            </li>
+                            <li class="nav-item"><a class="nav-link" href="index.html" data-translate="nav_home">Inicio</a></li>
+                            <li class="nav-item"><a class="nav-link" href="nosotros.html" data-translate="nav_about">Nosotros</a></li>
+                            <li class="nav-item"><a class="nav-link" href="servicios.html" data-translate="nav_services">Servicios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="eventos.html" data-translate="nav_events">Eventos</a></li>
+                            <li class="nav-item"><a class="nav-link" href="contacto.html" data-translate="nav_contact">Contacto</a></li>
+                            <li class="nav-item"><a class="nav-link" href="donaciones.html" data-translate="nav_donations">Donaciones</a></li>
                         </ul>
                     </div>
                 </div>
@@ -329,14 +327,14 @@
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-book-open"></i></div>
                     <h3 class="service-title" data-translate="service3_title">Estudio Bíblico</h3>
-                    <p class="service-time" data-translate="service3_time">Miércoles a las 7:00 pm</p>
+                    <p class="service-time" data-translate="service3_time">Viernes a las 7:00 pm</p>
                     <p class="service-description" data-translate="service3_desc">Profundiza en las Escrituras y descubre los tesoros de la sabiduría
                         divina para aplicarlos a tu vida diaria.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon"><i class="fas fa-hands-praying"></i></div>
                     <h3 class="service-title" data-translate="service4_title">Reunión de Oración</h3>
-                    <p class="service-time" data-translate="service4_time">Viernes a las 7:00 pm</p>
+                    <p class="service-time" data-translate="service4_time">Lunes a las 7:00 pm</p>
                     <p class="service-description" data-translate="service4_desc">Un poderoso tiempo de intercesión donde clamamos por las necesidades
                         de nuestra comunidad, nación y el mundo.</p>
                 </div>
@@ -374,9 +372,9 @@
                 </div>
                 <div class="col-md-4">
                     <h3 class="footer-title" data-translate="footer_contact">Contacto</h3>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> Calle Principal #123, Ciudad de Panamá</p>
-                    <p><i class="fas fa-phone me-2"></i> +507 1232-4567</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@espiritudevidapanama.org</p>
+                    <p><i class="fas fa-map-marker-alt me-2"></i> Workspace Centre, 3 piso Ciudad de Panamá</p>
+                    <p><i class="fas fa-phone me-2"></i> +507 6452-1159</p>
+                    <p><i class="fas fa-envelope me-2"></i> iglesiaespiritudevitapty@gmail.com</p>
                 </div>
             </div>
             <div class="footer-bottom">
