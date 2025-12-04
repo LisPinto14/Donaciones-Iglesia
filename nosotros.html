@@ -34,8 +34,7 @@
             font-family: 'Montserrat', sans-serif;
             color: var(--text-color);
             overflow-x: hidden;
-            background: var(--gradient-bg);
-            line-height: 1.6;
+            background-color: #ffffff;
         }
 
         h1,
@@ -69,7 +68,7 @@
         }
 
         .logo:hover {
-            transform: scale(1.05) rotate(2deg);
+            transform: scale(1.05);
         }
 
         .logo-text {
@@ -88,36 +87,31 @@
 
         .navbar-nav .nav-link {
             color: white !important;
-            margin: 0 15px;
+            margin: 0 10px;
             font-weight: 500;
             transition: all 0.3s ease;
             position: relative;
-            padding: 10px 0;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            font-size: 0.9rem;
+            padding-bottom: 5px;
         }
 
         .navbar-nav .nav-link:hover {
             color: var(--secondary-color) !important;
-            transform: translateY(-2px);
         }
 
         .navbar-nav .nav-link::after {
             content: '';
             position: absolute;
             width: 0;
-            height: 3px;
+            height: 2px;
             bottom: 0;
             left: 50%;
-            background: var(--gradient-secondary);
+            background-color: var(--secondary-color);
             transition: all 0.3s ease;
-            border-radius: 2px;
         }
 
         .navbar-nav .nav-link:hover::after {
-            width: 100%;
-            left: 0;
+            width: 80%;
+            left: 10%;
         }
 
         /* Language Selector Styles */
@@ -191,7 +185,7 @@
         /* Hero Section */
         .hero-section {
             background: var(--gradient-primary);
-            padding: 120px 0 50px;
+            padding: 130px 0 80px;
             position: relative;
             overflow: hidden;
         }
@@ -217,11 +211,7 @@
         .hero-title {
             font-size: 2.5rem;
             margin-bottom: 15px;
-            background: var(--gradient-secondary);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: none;
+            color: white;
         }
 
         .hero-subtitle {
@@ -235,7 +225,7 @@
         /* About Section */
         .about-section {
             padding: 80px 0;
-            background: transparent;
+            background-color: #fff;
             position: relative;
         }
 
@@ -278,68 +268,50 @@
         }
 
         .about-card {
-            background: white;
+            background-color: var(--light-bg);
             border-radius: 15px;
             padding: 30px;
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-            border: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        .about-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 5px;
-            background: var(--gradient-secondary);
+            border-left: 5px solid var(--secondary-color);
         }
 
         .about-card:hover {
-            transform: translateY(-15px);
-            box-shadow: 0 25px 50px rgba(11, 29, 58, 0.2);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .about-card-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--gradient-secondary);
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--dark-gold));
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
+            margin: 0 auto 20px;
             color: white;
-            font-size: 1.8rem;
-            box-shadow: 0 8px 20px rgba(212, 175, 55, 0.3);
-            transition: all 0.3s ease;
-        }
-
-        .about-card:hover .about-card-icon {
-            transform: scale(1.1) rotate(5deg);
+            font-size: 1.5rem;
         }
 
         .about-card h3 {
             color: var(--primary-color);
-            margin-bottom: 20px;
-            font-size: 1.5rem;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
             text-align: center;
         }
 
         .about-card p {
             color: var(--text-color);
-            line-height: 1.7;
+            line-height: 1.6;
             text-align: center;
-            font-size: 1rem;
+            font-size: 0.95rem;
         }
 
         /* Image Section */
         .image-section {
             padding: 60px 0;
-            background: var(--gradient-bg);
+            background-color: var(--light-bg);
         }
 
         .about-image-container {
@@ -349,47 +321,29 @@
 
         .about-image {
             display: inline-block;
-            border-radius: 20px;
+            border-radius: 15px;
             overflow: hidden;
-            box-shadow: 0 20px 40px rgba(11, 29, 58, 0.2);
-            border: 5px solid white;
-            position: relative;
-            transition: all 0.4s ease;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
             max-width: 60%;
             margin: 0 auto;
         }
 
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: -5px;
-            left: -5px;
-            right: -5px;
-            bottom: -5px;
-            background: var(--gradient-secondary);
-            border-radius: 25px;
-            z-index: -1;
-        }
-
         .about-image:hover {
-            transform: scale(1.02) rotate(1deg);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
         }
 
         .about-image img {
             width: 100%;
             height: auto;
-            transition: transform 0.5s ease;
             display: block;
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
         }
 
         .image-caption {
             text-align: center;
             margin-top: 20px;
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             font-weight: 600;
             color: var(--primary-color);
             font-family: 'Playfair Display', serif;
@@ -397,27 +351,16 @@
 
         /* Footer Styles */
         .footer {
-            background: var(--gradient-primary);
+            background-color: var(--primary-color);
             color: white;
-            padding: 80px 0 30px;
-            position: relative;
-        }
-
-        .footer::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="footerGrain" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="0.5" fill="rgba(212,175,55,0.1)"/><circle cx="40" cy="40" r="0.3" fill="rgba(212,175,55,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23footerGrain)"/></svg>');
+            padding: 60px 0 20px;
+            margin-top: 40px;
         }
 
         .footer-title {
             color: var(--secondary-color);
             margin-bottom: 25px;
-            font-size: 1.6rem;
-            position: relative;
+            font-size: 1.5rem;
         }
 
         .social-icons {
@@ -427,9 +370,9 @@
         }
 
         .social-icon {
-            width: 50px;
-            height: 50px;
-            background: rgba(255, 255, 255, 0.1);
+            width: 45px;
+            height: 45px;
+            background-color: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -437,15 +380,13 @@
             color: white;
             transition: all 0.3s ease;
             text-decoration: none;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .social-icon:hover {
-            background: var(--gradient-secondary);
+            background-color: var(--secondary-color);
             color: var(--primary-color);
-            transform: translateY(-8px) scale(1.1);
-            box-shadow: 0 10px 25px rgba(212, 175, 55, 0.4);
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
         }
 
         .footer-links {
@@ -458,29 +399,28 @@
         }
 
         .footer-links a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.7);
             text-decoration: none;
             transition: all 0.3s ease;
-            position: relative;
         }
 
         .footer-links a:hover {
             color: var(--secondary-color);
-            padding-left: 10px;
+            padding-left: 5px;
         }
 
         .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 50px;
-            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            margin-top: 40px;
+            padding-top: 20px;
             text-align: center;
-            color: rgba(255, 255, 255, 0.6);
+            color: rgba(255, 255, 255, 0.5);
         }
 
         /* Responsive Design */
         @media (max-width: 768px) {
             .hero-section {
-                padding: 100px 0 40px;
+                padding: 120px 0 60px;
             }
 
             .hero-title {
@@ -498,20 +438,15 @@
             .about-card {
                 padding: 30px 20px;
             }
-
-            .navbar-nav .nav-link {
-                margin: 0 8px;
-                font-size: 0.85rem;
-            }
         }
 
         @media (max-width: 576px) {
             .hero-section {
-                padding: 90px 0 35px;
+                padding: 110px 0 50px;
             }
 
             .hero-title {
-                font-size: 1.6rem;
+                font-size: 1.8rem;
             }
 
             .about-cards {
@@ -648,10 +583,9 @@
                     <div class="social-icons">
                         <a href="https://www.instagram.com/ministerioespiritudevidapty" target="_blank"
                             class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.facebook.com/Espiritu%20de%20Vida%20Panam%C3%A1" target="_blank"
+                        <a href="https://www.facebook.com/share/17RKe3Eeia/" target="_blank"
                             class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="https://www.youtube.com/EspirituVidaPTY" target="_blank" class="social-icon"><i
+                        <a href="https://www.youtube.com/@EspiritudeVidaPTY" target="_blank" class="social-icon"><i
                                 class="fab fa-youtube"></i></a>
                     </div>
                 </div>
@@ -668,7 +602,7 @@
                 <div class="col-md-4">
                     <h3 class="footer-title" data-translate="footer_contact">Contacto</h3>
                     <p><i class="fas fa-map-marker-alt me-2"></i> Workspace Centre, 3 piso Ciudad de Panamá</p>
-                    <p><i class="fas fa-phone me-2"></i> +507 6452-1159</p>
+                    <p><i class="fas fa-phone me-2"></i> 69832696</p>
                     <p><i class="fas fa-envelope me-2"></i> iglesiaespiritudevitapty@gmail.com</p>
                 </div>
             </div>
